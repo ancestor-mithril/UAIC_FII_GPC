@@ -1036,7 +1036,7 @@ void DisplayImaginea2()
 class CImagine3
 {
 public:
-	void curbaDragonului(double lungime, int nivel, CPunct& p, CVector& v, int d)
+	void curbaTriunghi(double lungime, int nivel, CPunct& p, CVector& v, int d)
 	{
 		if (nivel == 0)
 		{
@@ -1046,13 +1046,13 @@ public:
 		}
 
 
-		curbaDragonului(lungime / 3, nivel - 1, p, v, -d);
+		curbaTriunghi(lungime / 3, nivel - 1, p, v, -d);
 
 		v.rotatie(d * 60);
-		curbaDragonului(lungime / 3, nivel - 1, p, v, d);
+		curbaTriunghi(lungime / 3, nivel - 1, p, v, d);
 
 		v.rotatie(d * 60);
-		curbaDragonului(lungime / 3, nivel - 1, p, v, -d);
+		curbaTriunghi(lungime / 3, nivel - 1, p, v, -d);
 
 	}
 
@@ -1061,7 +1061,7 @@ public:
 		CVector v(0.0, 1.0);
 		CPunct p(0.0, -0.5);
 
-		curbaDragonului(lungime * pow(3.0 / 2.0, nivel), nivel, p, v, 1);
+		curbaTriunghi(lungime * pow(3.0 / 2.0, nivel), nivel, p, v, 1);
 	}
 };
 
